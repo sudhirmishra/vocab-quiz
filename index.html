@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ⚡>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="canonical" href="quiz.html">
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <title>Document</title>
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <script async custom-element="amp-story"
+            src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+            <script async custom-element="amp-story-interactive-quiz" src="https://cdn.ampproject.org/v0/amp-story-interactive-0.1.js"></script>
+    </head>
+    <body>
+        <style amp-custom>
+            amp-story {
+              font-family: 'Oswald',sans-serif;
+              color: #fff;
+            }
+            amp-story-page {
+              background-color: #000;
+            }
+        </style>
+        <amp-story standalone
+            title="Joy of Pets">
+            <amp-story-page id="cover">
+                <amp-story-grid-layer template="thirds">
+                  <h1 grid-area="middle-third">Learn New Words - Part 1</h1>
+                  <p  grid-area="upper-third">By AMP Tutorials</p>
+                </amp-story-grid-layer>
+              </amp-story-page>
+            <amp-story-page id="page1">
+                <amp-story-grid-layer template="thirds">
+                    <amp-story-interactive-quiz
+                        grid-area="middle-third"
+                        id="arts-quiz"
+                        prompt-text=' store means:'
+                        option-1-text="college"
+                        option-2-text="shop" option-2-correct option-2-confetti="🎨"
+                        option-3-text="passage"
+                        option-4-text="habit">
+                    </amp-story-interactive-quiz>
+                </amp-story-grid-layer>
+              </amp-story-page>
+        </amp-story>
+    </body>
+</html>
