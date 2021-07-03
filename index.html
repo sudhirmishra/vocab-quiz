@@ -17,21 +17,19 @@
         <body>
             <style amp-custom>
                 #arts-quiz-1, #arts-quiz-2, #arts-quiz-3, #arts-quiz-4, #results-1{
-                    --interactive-accent-color: yellow;
-                    --interactive-prompt-text-color: blue;
+                    --interactive-accent-color: rgba(116,252,225,1);
+                    --interactive-prompt-text-color: #1822EA;
                     --interactive-prompt-background: white;
+                }
+                .quiz-page{
+                    background: linear-gradient(180deg, #1822EA, rgba(116,252,225,1))
+                }
+                .aux-page{
+                    background: linear-gradient(180deg, rgba(116,252,225,1), #1822EA)
                 }
                 amp-story {
                     font-family: 'Oswald',sans-serif;
                     color: #fff;
-                }
-                amp-story-page {
-                    background-color: rgb(58, 82, 149);
-                }
-                #page1, #page2, #page3, #page4 {
-                    background-color: #e5e5f7;
-                    opacity: 0.8;
-                    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 4px ), repeating-linear-gradient( #444cf755, #444cf7 );                
                 }
                 amp-story-grid-layer {
                     justify-content: center;
@@ -45,13 +43,13 @@
                         <li><a href="https://www.linkedin.com/in/mishrasudhir/"> Built by Sudhir Mishra </a></li>
                     </ul>
                 </amp-sidebar>
-                <amp-story-page id="cover">
+                <amp-story-page id="cover" class="aux-page">
                     <amp-story-grid-layer template="thirds">
                         <h1 grid-area="lower-third">Learn New Words</h1>
                         <h2 grid-area="middle-third" style="text-align:center">Set Main</h2>
                     </amp-story-grid-layer>
                 </amp-story-page>
-                <amp-story-page id="page1">
+                <amp-story-page id="page1" class="quiz-page">
                 <amp-story-grid-layer template="thirds">
                     <amp-story-interactive-quiz
                         grid-area="middle-third"
@@ -60,11 +58,11 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text="examining one's own thoughts and feelings"
-                        option-1-text="philanthropist"
-                        option-2-text="multifarious" 
-                        option-4-correct option-4-confetti="Wow !!"
-                        option-3-text="antidote"
-                        option-4-text="introspection">
+                        option-1-text="multifarious"
+                        option-2-text="philanthropist" 
+                        option-3-correct option-3-confetti="&#127942;"
+                        option-3-text="introspection"
+                        option-4-text="antidote">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
                 <amp-story-page-attachment layout="nodisplay" cta-text="Read more" title="Usage">
@@ -75,7 +73,7 @@
                       </div>
                     </amp-fit-text>
                 </amp-story-page-attachment>
-            </amp-story-page><amp-story-page id="page2">
+            </amp-story-page><amp-story-page id="page2" class="quiz-page">
                 <amp-story-grid-layer template="thirds">
                     <amp-story-interactive-quiz
                         grid-area="middle-third"
@@ -84,9 +82,9 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text="one who loves mankind"
-                        option-1-text="introspection"
-                        option-2-text="philanthropist" 
-                        option-2-correct option-2-confetti="Wow !!"
+                        option-1-text="philanthropist"
+                        option-2-text="introspection" 
+                        option-1-correct option-1-confetti="&#127942;"
                         option-3-text="antidote"
                         option-4-text="multifarious">
                     </amp-story-interactive-quiz>
@@ -99,7 +97,7 @@
                       </div>
                     </amp-fit-text>
                 </amp-story-page-attachment>
-            </amp-story-page><amp-story-page id="page3">
+            </amp-story-page><amp-story-page id="page3" class="quiz-page">
                 <amp-story-grid-layer template="thirds">
                     <amp-story-interactive-quiz
                         grid-area="middle-third"
@@ -108,11 +106,11 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text="medicine used against a poison or a disease"
-                        option-1-text="multifarious"
-                        option-2-text="introspection" 
-                        option-3-correct option-3-confetti="Wow !!"
-                        option-3-text="antidote"
-                        option-4-text="philanthropist">
+                        option-1-text="introspection"
+                        option-2-text="philanthropist" 
+                        option-4-correct option-4-confetti="&#127942;"
+                        option-3-text="multifarious"
+                        option-4-text="antidote">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
                 <amp-story-page-attachment layout="nodisplay" cta-text="Read more" title="Usage">
@@ -123,7 +121,7 @@
                       </div>
                     </amp-fit-text>
                 </amp-story-page-attachment>
-            </amp-story-page><amp-story-page id="page4">
+            </amp-story-page><amp-story-page id="page4" class="quiz-page">
                 <amp-story-grid-layer template="thirds">
                     <amp-story-interactive-quiz
                         grid-area="middle-third"
@@ -132,11 +130,11 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text="varied; motley; greatly diversified"
-                        option-1-text="multifarious"
-                        option-2-text="philanthropist" 
-                        option-1-correct option-1-confetti="Wow !!"
-                        option-3-text="antidote"
-                        option-4-text="introspection">
+                        option-1-text="philanthropist"
+                        option-2-text="introspection" 
+                        option-3-correct option-3-confetti="&#127942;"
+                        option-3-text="multifarious"
+                        option-4-text="antidote">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
                 <amp-story-page-attachment layout="nodisplay" cta-text="Read more" title="Usage">
@@ -147,7 +145,7 @@
                       </div>
                     </amp-fit-text>
                 </amp-story-page-attachment>
-            </amp-story-page><amp-story-page id="page5">
+            </amp-story-page><amp-story-page id="page5" class="quiz-page">
                 <amp-story-grid-layer template="thirds">
                     <amp-story-interactive-quiz
                         grid-area="middle-third"
@@ -157,10 +155,10 @@
                         prompt-size="large"                        
                         prompt-text="scent waving movement carry lightly through"
                         option-1-text="ambidextrous"
-                        option-2-text="strive" 
-                        option-4-correct option-4-confetti="Wow !!"
-                        option-3-text="substantiation"
-                        option-4-text="waft">
+                        option-2-text="waft" 
+                        option-2-correct option-2-confetti="&#127942;"
+                        option-3-text="strive"
+                        option-4-text="substantiation">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
                 <amp-story-page-attachment layout="nodisplay" cta-text="Read more" title="Usage">
@@ -171,7 +169,7 @@
                       </div>
                     </amp-fit-text>
                 </amp-story-page-attachment>
-            </amp-story-page><amp-story-page id="page6">
+            </amp-story-page><amp-story-page id="page6" class="quiz-page">
                 <amp-story-grid-layer template="thirds">
                     <amp-story-interactive-quiz
                         grid-area="middle-third"
@@ -180,10 +178,10 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text="to make great efforts, to struggle"
-                        option-1-text="strive"
-                        option-2-text="waft" 
-                        option-1-correct option-1-confetti="Wow !!"
-                        option-3-text="ambidextrous"
+                        option-1-text="ambidextrous"
+                        option-2-text="strive" 
+                        option-2-correct option-2-confetti="&#127942;"
+                        option-3-text="waft"
                         option-4-text="substantiation">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
@@ -195,7 +193,7 @@
                       </div>
                     </amp-fit-text>
                 </amp-story-page-attachment>
-            </amp-story-page><amp-story-page id="page7">
+            </amp-story-page><amp-story-page id="page7" class="quiz-page">
                 <amp-story-grid-layer template="thirds">
                     <amp-story-interactive-quiz
                         grid-area="middle-third"
@@ -204,10 +202,10 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text="able to use the left hand or the right equally well"
-                        option-1-text="waft"
-                        option-2-text="strive" 
-                        option-4-correct option-4-confetti="Wow !!"
-                        option-3-text="substantiation"
+                        option-1-text="strive"
+                        option-2-text="substantiation" 
+                        option-4-correct option-4-confetti="&#127942;"
+                        option-3-text="waft"
                         option-4-text="ambidextrous">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
@@ -219,7 +217,7 @@
                       </div>
                     </amp-fit-text>
                 </amp-story-page-attachment>
-            </amp-story-page><amp-story-page id="page8">
+            </amp-story-page><amp-story-page id="page8" class="quiz-page">
                 <amp-story-grid-layer template="thirds">
                     <amp-story-interactive-quiz
                         grid-area="middle-third"
@@ -228,11 +226,11 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text="giving facts to support (statement) "
-                        option-1-text="waft"
-                        option-2-text="strive" 
-                        option-4-correct option-4-confetti="Wow !!"
-                        option-3-text="ambidextrous"
-                        option-4-text="substantiation">
+                        option-1-text="substantiation"
+                        option-2-text="waft" 
+                        option-1-correct option-1-confetti="&#127942;"
+                        option-3-text="strive"
+                        option-4-text="ambidextrous">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
                 <amp-story-page-attachment layout="nodisplay" cta-text="Read more" title="Usage">
@@ -244,7 +242,7 @@
                     </amp-fit-text>
                 </amp-story-page-attachment>
             </amp-story-page>
-                <amp-story-page id="page-results">
+                <amp-story-page id="page-results" class="aux-page">
                 <amp-story-grid-layer template="thirds">
                     <amp-story-interactive-results
                        animate-in="drop"
