@@ -15,25 +15,25 @@
         </head>
         <body>
             <style amp-custom>
-                #arts-quiz {
-                --interactive-accent-color: yellow;
-                --interactive-prompt-text-color: blue;
-                --interactive-prompt-background: white;
+                #arts-quiz-1, #arts-quiz-2, #arts-quiz-3, #arts-quiz-4 {
+                    --interactive-accent-color: yellow;
+                    --interactive-prompt-text-color: blue;
+                    --interactive-prompt-background: white;
                 }
                 amp-story {
-                font-family: 'Oswald',sans-serif;
-                color: #fff;
+                    font-family: 'Oswald',sans-serif;
+                    color: #fff;
                 }
                 amp-story-page {
-                background-color: rgb(149, 58, 58);
+                    background-color: rgb(58, 82, 149);
                 }
             </style>
             <amp-story standalone
                 title="Joy of Pets">
                 <amp-story-page id="cover">
-                    <amp-story-grid-layer template="thirds">
-                    <h1 grid-area="middle-third">Learn New Words - Part 1</h1>
-                    <p  grid-area="upper-third">By AMP Tutorials</p>
+                    <amp-story-grid-layer layout="container" template="vertical">
+                        <h1>Learn New Words</h1>
+                        <p>By <i>Sudhir Mishra</i></p>
                     </amp-story-grid-layer>
                 </amp-story-page>
                 <amp-story-page id="page1">
@@ -45,11 +45,11 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text='examining one's own thoughts and feelings'
-                        option-1-text="introspection"
-                        option-2-text="philanthropist" 
-                        option-1-correct option-1-confetti="Wow !!"
-                        option-3-text="antidote"
-                        option-4-text="multifarious">
+                        option-1-text="multifarious"
+                        option-2-text="antidote" 
+                        option-4-correct option-4-confetti="Wow !!"
+                        option-3-text="philanthropist"
+                        option-4-text="introspection">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
                 <amp-story-page-attachment layout="nodisplay" cta-text="Read more" title="Usage">
@@ -70,10 +70,10 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text='one who loves mankind'
-                        option-1-text="philanthropist"
-                        option-2-text="introspection" 
-                        option-1-correct option-1-confetti="Wow !!"
-                        option-3-text="antidote"
+                        option-1-text="antidote"
+                        option-2-text="philanthropist" 
+                        option-2-correct option-2-confetti="Wow !!"
+                        option-3-text="introspection"
                         option-4-text="multifarious">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
@@ -120,10 +120,10 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text='varied; motley; greatly diversified'
-                        option-1-text="multifarious"
-                        option-2-text="introspection" 
-                        option-1-correct option-1-confetti="Wow !!"
-                        option-3-text="philanthropist"
+                        option-1-text="introspection"
+                        option-2-text="philanthropist" 
+                        option-3-correct option-3-confetti="Wow !!"
+                        option-3-text="multifarious"
                         option-4-text="antidote">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
