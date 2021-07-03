@@ -15,7 +15,7 @@
         </head>
         <body>
             <style amp-custom>
-                #arts-quiz-1, #arts-quiz-2, #arts-quiz-3, #arts-quiz-4 {
+                #arts-quiz-1, #arts-quiz-2, #arts-quiz-3, #arts-quiz-4, #results-1{
                     --interactive-accent-color: yellow;
                     --interactive-prompt-text-color: blue;
                     --interactive-prompt-background: white;
@@ -27,13 +27,22 @@
                 amp-story-page {
                     background-color: rgb(58, 82, 149);
                 }
+                #page1, #page2, #page3, #page4 {
+                    background-color: #e5e5f7;
+                    opacity: 0.8;
+                    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 4px ), repeating-linear-gradient( #444cf755, #444cf7 );                
+                }
+                amp-story-grid-layer {
+                    justify-content: center;
+                }
             </style>
             <amp-story standalone
                 title="Joy of Pets">
                 <amp-story-page id="cover">
-                    <amp-story-grid-layer layout="container" template="vertical">
-                        <h1>Learn New Words</h1>
-                        <p>By <i>Sudhir Mishra</i></p>
+                    <amp-story-grid-layer template="thirds">
+                        <h1 grid-area="upper-third">Learn New Words</h1>
+                        <h4 grid-area="middle-third" style="text-align:center">Set I</h4>
+                        <p grid-area="lower-third" style="text-align:center">By<br> <i>Sudhir Mishra</i></p>
                     </amp-story-grid-layer>
                 </amp-story-page>
                 <amp-story-page id="page1">
@@ -46,9 +55,9 @@
                         prompt-size="large"                        
                         prompt-text='examining one's own thoughts and feelings'
                         option-1-text="multifarious"
-                        option-2-text="antidote" 
+                        option-2-text="philanthropist" 
                         option-4-correct option-4-confetti="Wow !!"
-                        option-3-text="philanthropist"
+                        option-3-text="antidote"
                         option-4-text="introspection">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
@@ -70,10 +79,10 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text='one who loves mankind'
-                        option-1-text="antidote"
-                        option-2-text="philanthropist" 
-                        option-2-correct option-2-confetti="Wow !!"
-                        option-3-text="introspection"
+                        option-1-text="introspection"
+                        option-2-text="antidote" 
+                        option-3-correct option-3-confetti="Wow !!"
+                        option-3-text="philanthropist"
                         option-4-text="multifarious">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
@@ -95,9 +104,9 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text='medicine used against a poison or a disease'
-                        option-1-text="antidote"
-                        option-2-text="introspection" 
-                        option-1-correct option-1-confetti="Wow !!"
+                        option-1-text="introspection"
+                        option-2-text="antidote" 
+                        option-2-correct option-2-confetti="Wow !!"
                         option-3-text="philanthropist"
                         option-4-text="multifarious">
                     </amp-story-interactive-quiz>
@@ -120,10 +129,10 @@
                         chip-style="shadow"
                         prompt-size="large"                        
                         prompt-text='varied; motley; greatly diversified'
-                        option-1-text="introspection"
-                        option-2-text="philanthropist" 
-                        option-3-correct option-3-confetti="Wow !!"
-                        option-3-text="multifarious"
+                        option-1-text="philanthropist"
+                        option-2-text="multifarious" 
+                        option-2-correct option-2-confetti="Wow !!"
+                        option-3-text="introspection"
                         option-4-text="antidote">
                     </amp-story-interactive-quiz>
                 </amp-story-grid-layer>
@@ -137,6 +146,17 @@
                     </amp-fit-text>
                 </amp-story-page-attachment>
             </amp-story-page>
+                <amp-story-page id="page-results">
+                <amp-story-grid-layer template="thirds">
+                    <amp-story-interactive-results
+                       animate-in="drop"
+                       id="results-1"
+                       grid-area="middle-third"
+                       prompt-text="Awesome !!"
+                       option-2-results-category="Expert" option-2-text="You are as good as Mr Tharoor, be proud of it!" option-2-results-threshold="50">
+                    </amp-story-interactive-results>
+                </amp-story-grid-layer>
+              </amp-story-page>
                 <amp-story-bookend src="bookend.json" layout="nodisplay"></amp-story-bookend>
 
             </amp-story>
